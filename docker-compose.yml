@@ -1,0 +1,38 @@
+version: "3.7"
+
+x-service: &default-service
+    logging:
+        driver: json-file
+        options:
+            max-size: "10m"
+            max-file: "5"
+    init: true
+    restart: unless-stopped
+
+x-environment: &default-environment
+    TZ: Asia/Tokyo
+
+x-network-host: &custom-network-host
+    network_mode: "host"
+
+services:
+  narou:
+        <<: *default-service
+        <<: *custom-network-host
+        container_name: narou
+        image: collelog/narou:latest
+        ports:
+            - "33000:33000"
+            - "33001:33001"
+        volumes:
+            - .:/var/opt/narou:cached
+            - ./kindlegen:/opt/aozoraepub3/kindlegen
+        environment:
+            <<: *default-environment
+        stdin_open: true
+        tty: true
+
+networks:
+    default:
+        external:
+            name: bridge
