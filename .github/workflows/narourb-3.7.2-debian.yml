@@ -1,4 +1,4 @@
-name: narou-rpi-3.7.2-debian
+name: narou-3.7.2-debian
 
 on: [ workflow_dispatch ]
 
