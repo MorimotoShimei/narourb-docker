@@ -37,6 +37,7 @@ jobs:
           file: ./3.7.2-debian.Dockerfile
           tags: |
             collelog/narou:3.7.2
+            collelog/narou:latest
           platforms: linux/amd64
           push: true
           cache-from: type=local,src=/tmp/.buildx-cache

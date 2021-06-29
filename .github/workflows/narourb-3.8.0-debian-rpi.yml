@@ -1,4 +1,4 @@
-name: narou-3.7.2-debian
+name: narou-rpi-3.7.2-debian
 
 on: [ workflow_dispatch ]
 
@@ -34,10 +34,11 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./3.7.2-debian.Dockerfile
+          file: ./3.7.2-debian-rpi.Dockerfile
           tags: |
-            collelog/narou:3.7.2
-          platforms: linux/amd64
+            collelog/narou-rpi:3.7.2
+            collelog/narou-rpi:latest
+          platforms: linux/arm/v6,linux/arm/v7,linux/arm64
           push: true
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
