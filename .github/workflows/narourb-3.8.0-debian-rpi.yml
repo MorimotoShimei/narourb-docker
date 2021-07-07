@@ -30,13 +30,13 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
-        name: Build and push - 3.7.2-debian
+        name: Build and push - 3.8.0-debian
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./3.7.2-debian-rpi.Dockerfile
+          file: ./3.8.0-debian-rpi.Dockerfile
           tags: |
-            collelog/narou-rpi:3.7.2
+            collelog/narou-rpi:3.8.0
             collelog/narou-rpi:latest
           platforms: linux/arm/v6,linux/arm/v7,linux/arm64
           push: true
