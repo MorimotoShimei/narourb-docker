@@ -24,9 +24,9 @@ services:
         cap_add:
             - SYS_NICE
             - SYS_ADMIN
-        ports:
-            - "33000:33000"
-            - "33001:33001"
+#        ports:
+#            - "33000:33000"
+#            - "33001:33001"
         volumes:
             - .:/var/opt/narou:cached
             - ./kindlegen:/opt/aozoraepub3/kindlegen

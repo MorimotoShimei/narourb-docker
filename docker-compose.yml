@@ -21,9 +21,9 @@ services:
         <<: *custom-network-host
         container_name: narou
         image: collelog/narou:latest
-        ports:
-            - "33000:33000"
-            - "33001:33001"
+#        ports:
+#            - "33000:33000"
+#            - "33001:33001"
         volumes:
             - .:/var/opt/narou:cached
             - ./kindlegen:/opt/aozoraepub3/kindlegen
