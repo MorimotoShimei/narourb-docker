@@ -33,7 +33,7 @@ RUN set -eux && \
 	mkdir /usr/share/man/man1/ && \
 	apt-get update -qq && \
 	apt-get install -y --no-install-recommends \
-		openjdk-11-jre \
+		openjdk-11-jre libtools libyaml-dev \
 		tzdata && \
 	\
 	mkdir .narousetting  && \
