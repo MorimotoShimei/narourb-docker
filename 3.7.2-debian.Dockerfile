@@ -1,5 +1,5 @@
 # Narou.rb
-FROM collelog/buildenv:ruby3.0-debian AS build
+FROM morimotoshimei/buildenv:ruby3.0-debian AS build
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -22,7 +22,7 @@ RUN rm -rf /tmp/* /var/cache/apk/*
 
 
 FROM ruby:3.0.1-slim-buster
-LABEL maintainer "collelog <collelog.cavamin@gmail.com>"
+LABEL maintainer "morimotoshimei <morimoto.shimei@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 COPY ./services.sh /usr/local/bin/services.sh

@@ -11,7 +11,7 @@ RUN mv ./AozoraEpub3-1.1.0b55Q /opt/aozoraepub3/
 
 ## Narou.rb https://github.com/whiteleaf7/narou
 WORKDIR /tmp
-RUN gem install narou -v 3.8.0 --no-document
+RUN gem install narou -v 3.9.0 --no-document
 
 WORKDIR /build
 RUN cp --archive --parents --no-dereference /opt/aozoraepub3 /build

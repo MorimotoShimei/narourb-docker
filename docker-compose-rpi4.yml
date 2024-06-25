@@ -20,7 +20,7 @@ services:
         <<: *default-service
         <<: *custom-network-host
         container_name: narou
-        image: collelog/narou-rpi:latest
+        image: morimotoshimei/narou-rpi:latest
         cap_add:
             - SYS_NICE
             - SYS_ADMIN

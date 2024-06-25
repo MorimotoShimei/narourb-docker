@@ -20,7 +20,7 @@ services:
         <<: *default-service
         <<: *custom-network-host
         container_name: narou
-        image: collelog/narou:latest
+        image: morimotoshimei/narou:latest
 #        ports:
 #            - "33000:33000"
 #            - "33001:33001"
